@@ -1,14 +1,14 @@
 class CatholicNews::CLI
-  attr_reader :headline, :teaser, :link
+  
   def call
     selection
   end
 	
   def list_headlines
-	puts "Welcome to catholicnewsagency.com"
-	puts "Today's Headlines"
-	puts "-----------------"
+	puts "~~~~~~~~~~  Welcome to catholicnewsagency.com  ~~~~~~~~~~"
 	puts ""
+	puts "               Here are today's headlines:"
+	puts "               ---------------------------"
 	@story = CatholicNews::News.all_headlines
 	    @story.each.with_index(1) do |h, i|
 	      puts "#{i}. #{h}"
