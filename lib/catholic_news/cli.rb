@@ -21,6 +21,7 @@ class CatholicNews::CLI
 	input = nil
 		
 	while input != "exit"
+		puts ""
 		puts "Options:"
 		puts "-Type the number of the headline for more information"
 		puts "-Type headlines to see the list of headlines again"
