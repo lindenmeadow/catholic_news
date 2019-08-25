@@ -1,12 +1,4 @@
 class CatholicNews::News
-	attr_accessor :doc, :headline, :teaser, :link
-	
-  def initialize
-	  @doc = Nokogiri::HTML(open("https://www.catholicnewsagency.com/headlines"))
-	  @headline = headline
-	  @teaser = teaser
-	  @link = link
-	end
 	
 	def self.all_headlines
 	  @@all_headlines ||= headlines
@@ -43,7 +35,7 @@ class CatholicNews::News
 	
 	def self.headlines
 	  doc = Nokogiri::HTML(open("https://www.catholicnewsagency.com/headlines"))
-		headline ||= doc.search("div.noticia_list_title")
-		headline.collect{|h| h.text.strip}
+	  headline ||= doc.search("div.noticia_list_title")
+	  headline.collect{|h| h.text.strip}
 	end
 end
