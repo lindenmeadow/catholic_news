@@ -1,6 +1,9 @@
 # CatholicNews
 
-CatholicNews accesses the first news headlines page of the site catholicnewsagency.com. It presents the user with a numbered list of the headlines and allows them to select a headline to view a short teaser about and the URL of the story.
+Welcome to CatholicNews!
+This is a CLI Ruby project that I have created as part of my web developer studies through Flatiron School.
+CatholicNews 'scrapes' the first news headlines page of the site catholicnewsagency.com. First, it presents the user with a numbered list of the headlines from that page. Next, it allows the user to select a headline from the list, thereby displaying the headline again along with the story's date, teaser, and URL. The user may select anohter headline, view the list of headlines again, or exit the program. 
+The project's purpose is to demonstrate the use of Ruby elements such as modules, classes, variables, and methods. 
 
 ## Installation
 
