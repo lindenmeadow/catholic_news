@@ -1,17 +1,5 @@
 class CatholicNews::News
 	
-	def self.all_headlines
-	  @headlines ||= headlines
-	end
-	
-	def self.all_teasers
-	  @teasers ||= teasers
-	end
-	
-	def self.all_links
-	  @links ||= links
-	end
-	
 	def self.find_teaser(id)
 	  self.all_teasers[id-1]
 	end
