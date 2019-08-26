@@ -1,11 +1,11 @@
 class CatholicNews::News
 	
 	def self.find_teaser(id)
-	  self.all_teasers[id-1]
+	  self.teasers[id-1]
 	end
 	
 	def self.find_link(l)
-	  self.all_links[l-1]
+	  self.links[l-1]
 	end
 
 	def self.teasers
