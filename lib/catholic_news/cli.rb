@@ -9,7 +9,7 @@ class CatholicNews::CLI
 	puts ""
 	puts "               Here are today's headlines:"
 	puts "               ---------------------------"
-	@story = CatholicNews::News.all_headlines
+	@story = CatholicNews::News.headlines
 	    @story.each.with_index(1) do |h, i|
 	      puts "#{i}. #{h}"
 	      puts "-------------------------"
