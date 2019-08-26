@@ -1,8 +1,6 @@
 # CatholicNews
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/catholic_news`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+CatholicNews accesses the first news headlines page of the site catholicnewsagency.com. It presents the user with a numbered list of the headlines and allows them to select a headline to view a short teaser about and the URL of the story.
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Execute the program and follow the prompts.
 
 ## Development
 
