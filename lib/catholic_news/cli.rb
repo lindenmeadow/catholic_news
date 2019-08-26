@@ -28,19 +28,19 @@ class CatholicNews::CLI
 		puts "-Or type exit to quit"
 			
 		input = gets.strip.downcase
-			if input == "headlines"
-			     list_headlines
-			elsif input.to_i > 0 && input.to_i <= 20
-			     puts "~~~~~~~~~~~~~~~~~~~~~~~~~"
-			     puts "--> " + CatholicNews::News.find_teaser(input.to_i)
-			     puts ""
-			     puts "Full story: www.catholicnewsagency.com" + CatholicNews::News.find_link(input.to_i)
-			     puts "~~~~~~~~~~~~~~~~~~~~~~~~~"
-			elsif input == "exit"
-			     finish
-			else
-			     puts "Invalid entry."
-			end
+		if input == "headlines"
+			list_headlines
+		elsif input.to_i > 0 && input.to_i <= 20
+			puts "~~~~~~~~~~~~~~~~~~~~~~~~~"
+			puts "--> " + CatholicNews::News.find_teaser(input.to_i)
+			puts ""
+			puts "Full story: www.catholicnewsagency.com" + CatholicNews::News.find_link(input.to_i)
+			puts "~~~~~~~~~~~~~~~~~~~~~~~~~"
+		elsif input == "exit"
+			finish
+		else
+			puts "Invalid entry."
+		end
 	end
   end
 	
