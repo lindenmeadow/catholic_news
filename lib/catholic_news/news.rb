@@ -1,15 +1,15 @@
 class CatholicNews::News
 	
 	def self.all_headlines
-	  @@all_headlines ||= headlines
+	  @headlines ||= headlines
 	end
 	
 	def self.all_teasers
-	  @@all_teasers ||= teasers
+	  @teasers ||= teasers
 	end
 	
 	def self.all_links
-	  @@all_links ||= links
+	  @links ||= links
 	end
 	
 	def self.find_teaser(id)
@@ -19,7 +19,6 @@ class CatholicNews::News
 	def self.find_link(l)
 	  self.all_links[l-1]
 	end
-	
 
 	def self.teasers
 	  doc = Nokogiri::HTML(open("https://www.catholicnewsagency.com/headlines"))
