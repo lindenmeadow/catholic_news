@@ -9,8 +9,8 @@ class CatholicNews::CLI
 	puts ""
 	puts "               Here are today's headlines:"
 	puts "               ---------------------------"
-	@headlines = CatholicNews::News.headlines
-	    @headlines.each.with_index(1) do |h, i|
+	@all_headlines = CatholicNews::News.headlines
+	    @all_headlines.each.with_index(1) do |h, i|
 	      puts "#{i}. #{h}"
 	      puts "-------------------------"
 	    end 
@@ -30,7 +30,7 @@ class CatholicNews::CLI
 		input = gets.strip.downcase
 		if input == "headlines"
 			list_headlines
-		elsif input.to_i > 0 && input.to_i <= @headlines.length
+		elsif input.to_i > 0 && input.to_i <= @all_headlines.length
 			puts "~~~~~~~~~~~~~~~~~~~~~~~~~"
 			puts "--> " + CatholicNews::News.find_teaser(input.to_i)
 			puts ""
