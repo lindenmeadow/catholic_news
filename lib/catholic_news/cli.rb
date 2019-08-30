@@ -30,7 +30,7 @@ class CatholicNews::CLI
 		input = gets.strip.downcase
 		if input == "headlines"
 			list_headlines
-		elsif input.to_i > 0 && input.to_i <= 20
+		elsif input.to_i > 0 && input.to_i <= CatholicNews::Story.all.length
       		story_info = CatholicNews::Story.all[input.to_i-1]
 			puts "~~~~~~~~~~~~~~~~~~~~~~~~~"
 			puts "--> " + story_info.teaser
