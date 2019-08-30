@@ -1,5 +1,7 @@
 require 'open-uri'
 require 'nokogiri'
+require 'colorize'
+require 'colorized_string'
 
 require_relative "./catholic_news/version.rb"
 require_relative "./catholic_news/cli.rb"
