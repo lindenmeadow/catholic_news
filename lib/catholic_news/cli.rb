@@ -23,7 +23,7 @@ class CatholicNews::CLI
 	while input != "exit"
 		puts ""
 		puts "Options:"
-		puts "-Type the number of the headline for more information"
+		puts "-Type the number of a headline for more information"
 		puts "-Type headlines to see the list of headlines again"
 		puts "-Or type exit to quit"
 
