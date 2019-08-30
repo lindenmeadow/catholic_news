@@ -6,13 +6,13 @@ class CatholicNews::CLI
   end
 
   def list_headlines
-	puts "~~~~~~~~~~  Welcome to catholicnewsagency.com  ~~~~~~~~~~"
+	puts "~~~~~~~~~~  Welcome to catholicnewsagency.com  ~~~~~~~~~~".colorize(:green)
 	puts ""
-	puts "               Here are today's headlines:"
-	puts "               ---------------------------"
+	puts "               Here are today's headlines:".colorize(:green)
+	puts "               ---------------------------".colorize(:green)
   CatholicNews::Story.all.each_with_index do |h, i|
 	      puts "#{i + 1}. #{h.headline}"
-	      puts "-------------------------"
+	      puts "-------------------------".colorize(:green)
 	    end
 	end
 
@@ -22,31 +22,31 @@ class CatholicNews::CLI
 
 	while input != "exit"
 		puts ""
-		puts "Options:"
-		puts "-Type the number of a headline for more information"
-		puts "-Type headlines to see the list of headlines again"
-		puts "-Or type exit to quit"
+		puts "Options:".colorize(:yellow)
+		puts "-Type the number of a headline for more information".colorize(:yellow)
+		puts "-Type headlines to see the list of headlines again".colorize(:yellow)
+		puts "-Or type exit to quit".colorize(:yellow)
 
 		input = gets.strip.downcase
 		if input == "headlines"
 			list_headlines
 		elsif input.to_i > 0 && input.to_i <= CatholicNews::Story.all.length
       		story_info = CatholicNews::Story.all[input.to_i-1]
-			puts "~~~~~~~~~~~~~~~~~~~~~~~~~"
+			puts "~~~~~~~~~~~~~~~~~~~~~~~~~".colorize(:green)
 			puts "--> " + story_info.teaser
 			puts ""
-			puts "Full story: www.catholicnewsagency.com" + story_info.link
-			puts "~~~~~~~~~~~~~~~~~~~~~~~~~"
+			puts "Full story: www.catholicnewsagency.com#{story_info.link}".colorize(:blue)
+			puts "~~~~~~~~~~~~~~~~~~~~~~~~~".colorize(:green)
 		elsif input == "exit"
 			finish
 		else
-			puts "Invalid entry."
+			puts "Invalid entry.".colorize(:yellow)
 		end
 	end
   end
 
   def finish
-       puts "Thanks for visiting! Check back tomorrow for more news!"
+       puts "Thanks for visiting! Check back tomorrow for more news!".colorize(:green)
   end
 
 end
